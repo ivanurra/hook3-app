@@ -12,7 +12,7 @@ export const useCounter = (initialValue = 0) => {
   };
 
   const reset = () => {
-    setCounter(0);
+    setCounter(initialValue);
   };
 
   return { counter, increment, decrement, reset };
