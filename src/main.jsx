@@ -7,7 +7,7 @@ import { SimpleForm } from "./02-useEffect/SimpleForm";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <SimpleForm />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <SimpleForm />
+  // </React.StrictMode>
 );
