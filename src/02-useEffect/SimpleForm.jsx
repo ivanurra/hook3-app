@@ -20,6 +20,14 @@ export const SimpleForm = () => {
     console.log("useEffect here!");
   }, []);
 
+  useEffect(() => {
+    console.log("formState updated!");
+  }, [formState]);
+
+  useEffect(() => {
+    console.log("email changed!");
+  }, [email]);
+
   return (
     <>
       <h1>Form</h1>
