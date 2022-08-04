@@ -1,7 +1,10 @@
 import { useFetch } from "../hooks/useFetch";
+import { useCounter } from "../hooks/useCounter";
 
 export const MultipleCustomHooks = () => {
-  const url = "https://www.breakingbadapi.com/api/quotes/1";
+  const { counter, increment } = useCounter();
+
+  const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
 
   const { data, isLoading, hasError } = useFetch(url);
 
@@ -21,7 +24,9 @@ export const MultipleCustomHooks = () => {
           </footer>
         </blockquote>
       )}
-      <button className="btn btn-primary">Next quote</button>
+      <button className="btn btn-primary" onClick={increment}>
+        Next quote
+      </button>
     </>
   );
 };
