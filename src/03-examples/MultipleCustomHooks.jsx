@@ -24,7 +24,11 @@ export const MultipleCustomHooks = () => {
           </footer>
         </blockquote>
       )}
-      <button className="btn btn-primary" onClick={increment}>
+      <button
+        className="btn btn-primary"
+        onClick={increment}
+        disabled={isLoading}
+      >
         Next quote
       </button>
     </>
