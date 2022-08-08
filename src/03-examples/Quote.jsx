@@ -1,8 +1,24 @@
+import { useLayoutEffect, useRef, useState } from "react";
+
 export const Quote = ({ author, quote }) => {
+  const pRef = useRef();
+
+  const [boxSize, setBoxSize] = useState({ width: 0, height: 0 });
+
+  useLayoutEffect(() => {
+    const { width, height } = pRef.current.getBoundingClientRect();
+    setBoxSize({ width, height });
+  }, [quote]);
+
   return (
-    <blockquote className="blockquote text-right">
-      <p className="mb-1 h3 text-center">{quote}</p>
-      <footer className="blockquote-footer text-center mt-1">{author}</footer>
-    </blockquote>
+    <>
+      <blockquote className="blockquote text-right" style={{ display: "flex" }}>
+        <p ref={pRef} className="mb-1 h3 text-center">
+          {quote}
+        </p>
+        <footer className="blockquote-footer text-center mt-1">{author}</footer>
+      </blockquote>
+      <code>{JSON.stringify(boxSize)}</code>
+    </>
   );
 };
