@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Memorize } from "./06-memos/Memorize";
+import { MemoHook } from "./06-memos/MemoHook";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Memorize />);
+ReactDOM.createRoot(document.getElementById("root")).render(<MemoHook/>);
