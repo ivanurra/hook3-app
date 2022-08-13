@@ -1,4 +1,6 @@
-export const ShowIncrement = ({ increment }) => {
+import React from "react";
+
+export const ShowIncrement = React.memo(({ increment }) => {
   return (
     <button
       className="btn btn-primary"
@@ -9,4 +11,4 @@ export const ShowIncrement = ({ increment }) => {
       +
     </button>
   );
-};
+});
