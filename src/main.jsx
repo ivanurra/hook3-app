@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Parent } from "./07-tarea-memo/Parent";
+import { TodoApp } from "./08-useReducer/TodoApp";
 import "./index.css";
-import "./08-useReducer/intro-reducer";
 
-// ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
+ReactDOM.createRoot(document.getElementById("root")).render(<TodoApp />);
